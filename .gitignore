@@ -1,0 +1,18 @@
+# --- python ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version
+.ruff_cache/
+.pytest_cache/
+.coverage
+
+# --- artifacts (checkpoints live on the Hub: RanveerSoni98/bipedal-walker-ppo-mlx) ---
+runs/
+hf/*.npz
+
+# --- misc ---
+.DS_Store
+.env
+.agents/

@@ -1,0 +1,37 @@
+[project]
+name = "mlx-walking-rl"
+version = "0.1.0"
+description = "PPO agent that learns to walk in BipedalWalker-v3, implemented in MLX and trained on the Apple GPU"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Ranveer Soni", email = "git@ranveersoni.me" }
+]
+requires-python = ">=3.12"
+keywords = ["reinforcement-learning", "ppo", "gymnasium", "box2d", "mlx", "apple-silicon"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mlx>=0.32.4",
+    "gymnasium[box2d]>=1.4.0",
+    "numpy>=2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+]
+
+[project.scripts]
+mlx-walking-rl = "mlx_walking_rl:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
