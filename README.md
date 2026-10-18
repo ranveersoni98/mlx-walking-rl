@@ -1,8 +1,7 @@
 # mlx-walking-rl
 
-A PPO agent that teaches itself to walk in **BipedalWalker-v3** — implemented
-entirely in [MLX](https://github.com/ml-explore/mlx) and trained on the Apple
-GPU. No PyTorch, no JAX.
+A PPO agent that teaches itself to walk in **BipedalWalker-v3** implemented
+entirely in [MLX](https://github.com/ml-explore/mlx).
 
 | Policy | Mean return | Avg. episode |
 | --- | --- | --- |
@@ -95,28 +94,10 @@ Bonus: the agent first settles into the classic *stand-still* local optimum
 (survives full episodes, scores ≈ −120) and escapes once the critic
 stabilizes.
 
-## Development
-
-```sh
-uv add --dev pytest ruff      # already in dev deps
-uv run pytest                 # GAE correctness test
-uv run ruff check .
-```
-
-Utility scripts:
-
-```sh
-uv run python scripts/inspect_rollout.py runs/walker1/ckpt_latest.npz   # rollout + normalizer internals
-uv run python scripts/trace_training.py                                  # per-iteration V/target/adv trace
-```
-
-To publish weights, stage them in `hf/` (`walker.npz`, `walker_final.npz`,
-model card, inference script) and run:
-
-```sh
-hf upload RanveerSoni98/bipedal-walker-ppo-mlx hf/ . --type model
-```
-
 ## License
 
-[MIT](LICENSE)
+Code is MIT - see [LICENSE](LICENSE).
+
+<p align="center">
+  Built with <3 and a lot of bad decisions! by <a href="https://ranveersoni.me">Ranveer Soni</a>
+</p>
