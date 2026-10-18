@@ -6,6 +6,9 @@ __pycache__/
 .python-version
 .ruff_cache/
 .pytest_cache/
+tests/
+hf/
+scripts/
 .coverage
 
 # --- artifacts (checkpoints live on the Hub: RanveerSoni98/bipedal-walker-ppo-mlx) ---
